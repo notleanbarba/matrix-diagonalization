@@ -1,12 +1,14 @@
 from itertools import cycle
 import elemental_operations as elem
 import numpy as np
+import scipy.io as scio
 
 # Inputs
-matrix = [[1, -1, 2, -1, -1],
-          [2, 1, -2, -2, -2],
-          [-1, 2, -4, 1, 1],
-          [3, 0, 0, -3, -3]]
+matrix = [[1, 1, 2, 8],
+          [-1, -2, 3, 1],
+          [3, -7, 4, 10]]
+
+matrix = scio.mmread("../../../Downloads/nnc261.mtx.gz").toarray().tolist()
 
 round_number = 2
 
